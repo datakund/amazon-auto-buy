@@ -1,4 +1,4 @@
-### Introduction
+## Amazon-Auto-Buy-Python
 Amazon-Auto-Buy is a python library that uses browser automation to purchase items on Amazon automatically. 
 At present, it runs on windows only.
 
@@ -10,27 +10,34 @@ Complete Documentation available [here](https://amazon-api.datakund.com/en/lates
 pip install amazon-auto-buy
 ```
 
-### Usage
-1. Install [Edit This Cookie Extension](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?hl=en) in browser
-2. Login to amazon.com in your browser
-3. Open extension & click on export cookies tab to copy cookies to clipboard
-4. Then in the code paste your cookies in _login_cookie function_
-   * cookies
-5. There are two ways of purchasing product:-
-   #### Credit/Debit Card
-   1. Login with cookies as defined above with _login_cookie function
-   2. Select Payment Method by passing ``payment_method`` in ``select_payment_method`` i.e "State Bank of India"
-   3. Fill cvv by passing ``cvv`` in ``fill_cvv`` function
-   4. Now place order by calling ``place_order`` function
-   5. Then run the code ```python Amazon_Buy_With_Card.py```
-   #### Net Banking
-   1. Login with cookies as defined above with _login_cookie function
-   2. Select Payment Method by passing ``payment_method`` in select_payment_method i.e "Net Banking"
-   3. Select bank by passing bank name in ``select_bank``
-   4. Now place order by calling ``place_order`` function
-   5. Then run the code ```python Amazon_Buy_With_Net_Banking.py```
+### Import
 
-### Example Cookies
+```sh
+from amazon_auto_buy import *
+```
+
+### Login
+
+To buy a product on amazon first we need to login to amazon. There are two ways of login:-
+* Credentials
+* Cookies
+
+#### Credentials
+
+```sh
+amazon.login(email="",password="")
+```
+
+#### Cookies
+
+```sh
+amazon.login_cookie(cookies=list_of_cookies)
+```
+
+##### Example Cookies
+
+To login with cookies [Edit this Cookie Extension](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?hl=en) can be added to browser and login to amazon.com , then export cookies and paste in above function of ``login_cookie``. Below is the example of cookies.
+
 ```[
 {
     "domain": ".amazon.com",
@@ -64,6 +71,41 @@ pip install amazon-auto-buy
 ...
 
 ]
+```
+
+### Buy Product
+
+To click on buy button can ``buy`` function by passing amazon product link in **product_url**.
+```sh
+amazon.buy(product_url='product link')
+```
+
+### Select Payment method
+
+Select payment method by calling ``select_payment_method`` function and pass payment method in **payment_method**. For example, "State Bank of India", "Upi", "Net Banking".
+```sh
+amazon.select_payment_method(payment_method='Punjab National Bank Debit Card')
+```
+
+### Select Bank
+
+Select bank by calling ``select_bank`` function and pass bank name in **bank**. For example, "State Bank of India"
+```sh
+amazon.select_bank(bank='Punjab National Bank Debit Card')
+```
+
+### Fill cvv
+
+Fill cvv by calling function ``fill_cvv`` and pass cvv number in **cvv**.
+```sh
+amazon.fill_cvv(cvv='345')
+```
+
+### Place Order
+
+Finally place order by calling function ``place_order``.
+```sh
+amazon.place_order()
 ```
 
 ### datakund
