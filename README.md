@@ -31,8 +31,9 @@ amazon.login(email="",password="")
 #### Cookies
 
 ```diff
-- text in red
+-
 amazon.login_cookie(cookies=list_of_cookies)
+@@
 ```
 
 ##### Example Cookies
