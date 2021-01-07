@@ -19,7 +19,7 @@ pip install amazon-auto-buy
 6. There are two ways of purchasing product:-
    #### Credit/Debit Card
    1. Login with cookies as defined above with _login_cookie function
-   2. Select Payment Method by passing ``payment_method`` in select_payment_method i.e "State Bank of India"
+   2. Select Payment Method by passing ``payment_method`` in ``select_payment_method`` i.e "State Bank of India"
    3. Fill cvv by passing ``cvv`` in ``fill_cvv`` function
    4. Now place order by calling ``place_order`` function
    5. Then run the code ```python Amazon_Buy_With_Card.py```
