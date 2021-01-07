@@ -4,6 +4,11 @@ At present, it runs on windows only.
 
 Complete Documentation available [here](https://amazon-api.datakund.com/en/latest/)
 
+### Support
+For any help / feedback you can message us here
+* datakund@gmail.com
+* https://t.me/datakund
+
 ### Installation
 
 ```sh
