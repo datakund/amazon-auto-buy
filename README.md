@@ -12,7 +12,7 @@ pip install amazon-auto-buy
 
 ### Import
 
-```sh
+```javascript
 from amazon_auto_buy import *
 ```
 
@@ -24,13 +24,13 @@ To buy a product on amazon first we need to login to amazon. There are two ways 
 
 #### Credentials
 
-```sh
+```javascript
 amazon.login(email="",password="")
 ```
 
 #### Cookies
 
-```sh
+```javascript
 amazon.login_cookie(cookies="list_of_cookies")
 ```
 
@@ -78,14 +78,14 @@ To login with cookies [Edit this Cookie Extension](https://chrome.google.com/web
 To click on buy button can ``buy`` function by passing amazon product link in **product_url**.
 
 ```javascript
-amazon.buy(a=b)
+amazon.buy(product_url='product link'))
 ```
 
 ### Select Payment method
 
 Select payment method by calling ``select_payment_method`` function and pass payment method in **payment_method**. For example, "State Bank of India", "Upi", "Net Banking".
 
-```sh
+```javascript
 amazon.select_payment_method(payment_method='Punjab National Bank Debit Card')
 ```
 
@@ -93,7 +93,7 @@ amazon.select_payment_method(payment_method='Punjab National Bank Debit Card')
 
 Select bank by calling ``select_bank`` function and pass bank name in **bank**. For example, "State Bank of India"
 
-```sh
+```javascript
 amazon.select_bank(bank='Punjab National Bank Debit Card')
 ```
 
@@ -101,7 +101,7 @@ amazon.select_bank(bank='Punjab National Bank Debit Card')
 
 Fill cvv by calling function ``fill_cvv`` and pass cvv number in **cvv**.
 
-```sh
+```javascript
 amazon.fill_cvv(cvv='345')
 ```
 
@@ -109,7 +109,7 @@ amazon.fill_cvv(cvv='345')
 
 Finally place order by calling function ``place_order``.
 
-```sh
+```javascript
 amazon.place_order()
 ```
 
