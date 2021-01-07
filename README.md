@@ -30,8 +30,8 @@ amazon.login(email="",password="")
 
 #### Cookies
 
-```
-amazon.login_cookie(cookies=list_of_cookies)
+```sh
+amazon.login_cookie(cookies="list_of_cookies")
 ```
 
 ##### Example Cookies
@@ -76,6 +76,7 @@ To login with cookies [Edit this Cookie Extension](https://chrome.google.com/web
 ### Buy Product
 
 To click on buy button can ``buy`` function by passing amazon product link in **product_url**.
+
 ```sh
 amazon.buy(product_url='product link')
 ```
@@ -83,6 +84,7 @@ amazon.buy(product_url='product link')
 ### Select Payment method
 
 Select payment method by calling ``select_payment_method`` function and pass payment method in **payment_method**. For example, "State Bank of India", "Upi", "Net Banking".
+
 ```sh
 amazon.select_payment_method(payment_method='Punjab National Bank Debit Card')
 ```
@@ -90,6 +92,7 @@ amazon.select_payment_method(payment_method='Punjab National Bank Debit Card')
 ### Select Bank
 
 Select bank by calling ``select_bank`` function and pass bank name in **bank**. For example, "State Bank of India"
+
 ```sh
 amazon.select_bank(bank='Punjab National Bank Debit Card')
 ```
@@ -97,6 +100,7 @@ amazon.select_bank(bank='Punjab National Bank Debit Card')
 ### Fill cvv
 
 Fill cvv by calling function ``fill_cvv`` and pass cvv number in **cvv**.
+
 ```sh
 amazon.fill_cvv(cvv='345')
 ```
@@ -104,6 +108,7 @@ amazon.fill_cvv(cvv='345')
 ### Place Order
 
 Finally place order by calling function ``place_order``.
+
 ```sh
 amazon.place_order()
 ```
