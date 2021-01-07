@@ -1,3 +1,4 @@
+### Introduction
 Amazon-Auto-Buy is a python library that automatically uses browser automation to purchase items on Amazon. 
 At present, it runs on windows only.
 
