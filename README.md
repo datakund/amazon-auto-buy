@@ -1,5 +1,5 @@
 ### Introduction
-Amazon-Auto-Buy is a python library that automatically uses browser automation to purchase items on Amazon. 
+Amazon-Auto-Buy is a python library that uses browser automation to purchase items on Amazon automatically. 
 At present, it runs on windows only.
 
 Complete Documentation available [here](https://amazon-api.datakund.com/en/latest/)
@@ -16,7 +16,7 @@ pip install amazon-auto-buy
 3. Open extension & click on export cookies tab to copy cookies to clipboard
 4. Then in the code paste your cookies in _login_cookie function_
    * cookies
-6. There are two ways of purchasing product:-
+5. There are two ways of purchasing product:-
    #### Credit/Debit Card
    1. Login with cookies as defined above with _login_cookie function
    2. Select Payment Method by passing ``payment_method`` in ``select_payment_method`` i.e "State Bank of India"
@@ -28,7 +28,7 @@ pip install amazon-auto-buy
    2. Select Payment Method by passing ``payment_method`` in select_payment_method i.e "Net Banking"
    3. Select bank by passing bank name in ``select_bank``
    4. Now place order by calling ``place_order`` function
-   2. Then run the code ```python Amazon_Buy_With_Net_Banking.py```
+   5. Then run the code ```python Amazon_Buy_With_Net_Banking.py```
 
 ### Example Cookies
 ```[
