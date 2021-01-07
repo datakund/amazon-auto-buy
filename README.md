@@ -78,7 +78,7 @@ To login with cookies [Edit this Cookie Extension](https://chrome.google.com/web
 To click on buy button can ``buy`` function by passing amazon product link in **product_url**.
 
 ```sh
-amazon.buy(a , b)
+amazon.buy(a)
 ```
 
 ### Select Payment method
