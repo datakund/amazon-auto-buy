@@ -1,15 +1,7 @@
-# amazon-auto-buy
-Amazon-Auto-Buy is a python library to buy product on amazon automatically using browser automation. 
-It currently runs only on windows.
+Amazon-Auto-Buy is a python library that automatically uses browser automation to purchase items on Amazon. 
+At present, it runs on windows only.
 
-This module depends on the following python modules
-* [requests](https://pypi.org/project/requests/)
-* [datakund](https://pypi.org/project/datakund/)
-
-#### DataKund
-[datakund](https://pypi.org/project/datakund/) is needed for browser automation. As soon as this library is imported in code, automated browser will open up in which product will be bought. To buy first login will need to be done. Login can be done either with credentials or via cookies
-
-Complete documentation for Amazon Automation available [here](https://amazon-api.datakund.com/en/latest/)
+Complete Documentation available [here](https://youtube-api.datakund.com/en/latest/)
 
 ### Installation
 
@@ -17,7 +9,55 @@ Complete documentation for Amazon Automation available [here](https://amazon-api
 pip install amazon-auto-buy
 ```
 
-### Import
-```sh
-from amazon_auto_buy import *
+### Usage
+1. Install [Edit This Cookie Extension](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?hl=en) in browser
+2. Login to youtube.com in your browser
+3. Open extension & click on export cookies tab to copy cookies to clipboard
+4. Then in the code paste your cookies in _login_cookie function_
+   * cookies
+5. Fill in all the inputs required in _upload function_
+   * title
+   * description
+   * video_path
+   * kid_type
+   * type
+5. Then run the code ```python youtube_video_upload.py```
+
+### Example Cookies
+```[
+{
+    "domain": ".youtube.com",
+    "expirationDate": 1671116358.392265,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "__Secure-3PAPISID",
+    "path": "/",
+    "sameSite": "no_restriction",
+    "secure": true,
+    "session": false,
+    "storeId": "0",
+    "value": "Y1zkx3HJhktM4Y__/A-aOUDHse1TaSaKpQ",
+    "id": 1
+},
+{
+    "domain": ".youtube.com",
+    "expirationDate": 1672322803.302724,
+    "hostOnly": false,
+    "httpOnly": true,
+    "name": "__Secure-3PSID",
+    "path": "/",
+    "sameSite": "no_restriction",
+    "secure": true,
+    "session": false,
+    "storeId": "0",
+    "value": "5AcqKCt5MuBkjOpLW7PdfNs83knLqt-qVZJzCriY_4_cftxmyExDbYRS65ezLjpKa_Xc7Q.",
+    "id": 2
+},
+...
+...
+
+]
 ```
+
+### datakund
+It uses [datakund](https://pypi.org/project/datakund/) internally to do browser automation
